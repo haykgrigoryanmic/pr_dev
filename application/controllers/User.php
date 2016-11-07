@@ -12,6 +12,10 @@ class User extends CI_Controller {
         $this->load->view('footer');
     }
 
+//    sdfvdsfsdf
+//sfd sd
+//f sdf
+//ds ffds
 
     public function users()
     {
@@ -24,6 +28,9 @@ class User extends CI_Controller {
         $this->load->view('user\users', $data);
         $this->load->view('footer');
     }
+
+
+    
 
     public function singleuser($user_id)
     {
