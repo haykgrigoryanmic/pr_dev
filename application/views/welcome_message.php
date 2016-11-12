@@ -47,6 +47,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 	#body {
 		margin: 0 15px 0 15px;
+		background-color:#E9967A;
 	}
 
 	p.footer {
