@@ -1,7 +1,7 @@
 
 
 <div id="container">
-    <h2> Test for git</h2>
+    <span>hayk</span>
     <a href="<?php echo site_url('user') ?>">Home</a>
     <p class="footer">All users list</p>
     <ul>
