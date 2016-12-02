@@ -11,8 +11,28 @@ class User_model extends CI_Model {
 
     public function __construct()
     {
-        // Call the CI_Model constructor
         parent::__construct();
+
+    }
+
+    /**
+     * @param $data
+     * @return bool|Object
+     */
+    public function getUser($data){
+        $this->db->select("*");
+        $this->db->where('username', $data['username']);
+        $this->db->where('password', $data['password']);
+        $query = $this->db->get('user');
+        if ($query->num_rows() > 0) {
+            return $query->result();
+        } else {
+            return false;
+        }
+    }
+
+    public function addUser($data){
+        return $this->db->insert('user', $data);
     }
 
     public function get_all_users()
@@ -30,5 +50,4 @@ class User_model extends CI_Model {
 
         return $query->result();
     }
-
 }
