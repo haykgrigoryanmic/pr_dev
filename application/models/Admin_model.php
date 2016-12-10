@@ -6,7 +6,7 @@
  * Time: 18:35
  */
 
-class User_model extends CI_Model {
+class Admin_model extends CI_Model {
 
 
     public function __construct()
@@ -19,11 +19,11 @@ class User_model extends CI_Model {
      * @param $data
      * @return bool|Object
      */
-    public function getUser($data){
+    public function get_admin($data){
         $this->db->select("id, email, first_name, middle_name, last_name");
         $this->db->where('email', $data['email']);
         $this->db->where('password', $data['password']);
-        $query = $this->db->get('user');
+        $query = $this->db->get('admin');
         if ($query->num_rows() > 0) {
             return $query->result_array();
         } else {
@@ -31,14 +31,14 @@ class User_model extends CI_Model {
         }
     }
 
-    public function addUser($data){
-        return $this->db->insert('user', $data);
+    public function add_admin($data){
+        return $this->db->insert('admin', $data);
     }
 
-    public function get_all_users()
+    public function get_all_admins()
     {
         $this->db->select("*");
-        $query = $this->db->get('user');
+        $query = $this->db->get('admin');
         if ($query->num_rows() > 0) {
             return $query->result_array();
         } else {
@@ -46,11 +46,11 @@ class User_model extends CI_Model {
         }
     }
 
-    public function get_user_by_id($id)
+    public function get_admin_by_id($id)
     {
         $this->db->select("*");
         $this->db->where('id', $id);
-        $query = $this->db->get('user');
+        $query = $this->db->get('admin');
 
         return $query->result();
     }
