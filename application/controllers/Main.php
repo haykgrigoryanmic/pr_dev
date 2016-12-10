@@ -15,5 +15,19 @@ class Main extends CI_Controller
     {
         parent::__construct();
         $this->load->model('user_model');
+        $this->load->library('session');
     }
+
+
+    public function index()
+    {
+        $this->layout->title('Main index');
+//        var_dump('asd');
+        var_dump($this->session->all_userdata());
+        $data['logged_in'] = $this->session->logged_in;
+        $this->layout->view('main/index', $data);
+    }
+    
+    
+    
 }

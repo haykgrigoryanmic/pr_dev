@@ -20,12 +20,12 @@ class User_model extends CI_Model {
      * @return bool|Object
      */
     public function getUser($data){
-        $this->db->select("*");
-        $this->db->where('username', $data['username']);
+        $this->db->select("id, email, first_name, middle_name, last_name");
+        $this->db->where('email', $data['email']);
         $this->db->where('password', $data['password']);
         $query = $this->db->get('user');
         if ($query->num_rows() > 0) {
-            return $query->result();
+            return $query->result_array();
         } else {
             return false;
         }
