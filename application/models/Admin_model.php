@@ -20,7 +20,7 @@ class Admin_model extends CI_Model {
      * @return bool|Object
      */
     public function get_admin($data){
-        $this->db->select("id, email, first_name, middle_name, last_name");
+        $this->db->select("id, email, username, first_name, middle_name, last_name");
         $this->db->where('email', $data['email']);
         $this->db->where('password', $data['password']);
         $query = $this->db->get('admin');

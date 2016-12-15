@@ -3,6 +3,8 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class Admin extends CI_Controller {
 
+    public $layout_name = 'layouts/admin.php';
+
     public function __construct()
     {
         parent::__construct();
@@ -10,6 +12,19 @@ class Admin extends CI_Controller {
         $this->load->model('user_model');
         $this->load->model('com_model');
         $this->load->library('session');
+    }
+
+    public function index()
+    {
+        $this->layout->title('Admin | index');
+
+        if($this->session->logged_in){
+            $data['logged_in'] = true;
+            $data['logged_in_user'] = $this->session->logged_in;
+        }else{
+            $data['logged_in'] = false;
+        }
+        $this->layout->view('admin/index', $data);
     }
 
 
@@ -48,19 +63,7 @@ class Admin extends CI_Controller {
             $this->layout->view('admin/users', $data);
         }
     }
-    public function index()
-    {
-        $this->layout->title('Main index');
 
-        if($this->session->logged_in){
-            $data['logged_in'] = true;
-            var_dump($this->session->logged_in);
-            $data['logged_in_user'] = $this->session->logged_in;
-        }else{
-            $data['logged_in'] = false;
-        }
-        $this->layout->view('admin/index', $data);
-    }
 
     public function login()
     {
@@ -81,9 +84,7 @@ class Admin extends CI_Controller {
                     'password' => hash('sha256', $password . ENCODE_SALT),
                 ]);
                 if(count($result) > 0){
-                    var_dump($result);
-//                    $this->session->sess_destroy();
-                    var_dump($this->session->set_userdata('logged_in', $result[0]));
+                    $this->session->set_userdata('logged_in', $result[0]);
                     redirect('admin/index');
                 }else{
                     $this->layout->view('admin/login');

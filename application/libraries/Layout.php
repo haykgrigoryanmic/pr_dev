@@ -24,7 +24,7 @@ class Layout {
         $this->obj =& get_instance();
         $this->layout_view = "layouts/default.php";
         // Grab layout from called controller
-        if (isset($this->obj->layout_view)) $this->layout_view = $this->obj->layout_view;
+        if (isset($this->obj->layout_name)) $this->layout_view = $this->obj->layout_name;
     }
 
     function view($view, $data = null, $return = false) {

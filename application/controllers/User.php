@@ -36,9 +36,7 @@ class User extends CI_Controller {
                 ]);
 
                 if(count($result) > 0){
-                    var_dump($result);
-//                    $this->session->sess_destroy();
-                    var_dump($this->session->set_userdata('logged_in', $result[0]));
+                    $this->session->set_userdata('logged_in', $result[0]);
                     redirect('main/index');
                 }else{
                     $this->layout->view('user/login');
