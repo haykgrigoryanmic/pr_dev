@@ -19,7 +19,7 @@ class User_model extends CI_Model {
      * @param $data
      * @return bool|Object
      */
-    public function getUser($data){
+    public function get_user($data) {
         $this->db->select("id, email, first_name, middle_name, last_name");
         $this->db->where('email', $data['email']);
         $this->db->where('password', $data['password']);
@@ -31,12 +31,11 @@ class User_model extends CI_Model {
         }
     }
 
-    public function addUser($data){
+    public function add_user($data) {
         return $this->db->insert('user', $data);
     }
 
-    public function get_all_users()
-    {
+    public function get_all_users() {
         $this->db->select("*");
         $query = $this->db->get('user');
         if ($query->num_rows() > 0) {
@@ -46,8 +45,7 @@ class User_model extends CI_Model {
         }
     }
 
-    public function get_user_by_id($id)
-    {
+    public function get_user_by_id($id) {
         $this->db->select("*");
         $this->db->where('id', $id);
         $query = $this->db->get('user');

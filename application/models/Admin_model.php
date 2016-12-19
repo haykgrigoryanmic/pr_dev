@@ -19,8 +19,8 @@ class Admin_model extends CI_Model {
      * @param $data
      * @return bool|Object
      */
-    public function get_admin($data){
-        $this->db->select("id, email, username, first_name, middle_name, last_name");
+    public function get_admin($data) {
+        $this->db->select("id, email, username, first_name, middle_name, last_name, role");
         $this->db->where('email', $data['email']);
         $this->db->where('password', $data['password']);
         $query = $this->db->get('admin');
@@ -31,12 +31,11 @@ class Admin_model extends CI_Model {
         }
     }
 
-    public function add_admin($data){
+    public function add_admin($data) {
         return $this->db->insert('admin', $data);
     }
 
-    public function get_all_admins()
-    {
+    public function get_all_admins() {
         $this->db->select("*");
         $query = $this->db->get('admin');
         if ($query->num_rows() > 0) {
@@ -46,8 +45,7 @@ class Admin_model extends CI_Model {
         }
     }
 
-    public function get_admin_by_id($id)
-    {
+    public function get_admin_by_id($id) {
         $this->db->select("*");
         $this->db->where('id', $id);
         $query = $this->db->get('admin');

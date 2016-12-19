@@ -53,5 +53,15 @@ $route['default_controller'] = '';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
 
+//ADMIN: ADMIN CONTROLLER ACTIONS
 $route['admin/(:any)/(:any)'] = "admin/admin/$1/$2";
+
+//ADMIN: USER CONTROLLER ACTIONS
+$route['admin/users'] = "admin/user/users";
+$route['admin/user/(:any)'] = "admin/user/$1";
+
+$route['admin/organisations'] = "admin/organisation/organisations";
+$route['admin/organisation/(:any)'] = "admin/organisation/$1";
+
 $route['admin/(:any)'] = "admin/admin/$1";
+$route['admin'] = "admin/admin/index";

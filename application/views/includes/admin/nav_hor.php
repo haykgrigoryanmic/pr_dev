@@ -5,7 +5,15 @@
     <h2>Admin Panel</h2>
 <?php } ?>
 
-<a href="<?php echo site_url('admin/logout') ?>">LogOut</a>
-<a href="<?php echo site_url('admin/login') ?>">Login</a>
+
+<?php  if(isset($logged_in) && $logged_in){?>
+    <a href="<?php echo site_url('admin/logout') ?>">LogOut</a>
+<?php }else{?>
+    <a href="<?php echo site_url('admin/login') ?>">Login</a>
+<?php } ?>
+
+
+
+
 
 <hr>
