@@ -15,10 +15,6 @@ class Admin extends Admin_Parent {
     }
 
     public function index() {
-//        if($this->session->admin_role == 1){
-//            var_dump($this->session->logged_in['username']);
-//        }
-
         $this->layout->title('Admin | index');
         $this->layout->view('admin/index', $this->view_data);
     }

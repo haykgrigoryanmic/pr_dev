@@ -1,7 +1,7 @@
 <div id="container">
     <h1>Register user</h1>
     <?php echo validation_errors(); ?>
-    <form method="post" action="register">
+    <form method="post" action="signup">
         <label for="email">email</label>
         <input type="text" name="email" value="<?php echo set_value('email'); ?>"/></br>
         
@@ -25,4 +25,14 @@
 
         <input type="submit" name="submit" value="Login"/>
     </form>
+<!---->
+    <div class="fb-like" data-href="https://lastday.club/private-military-contractor-modern-history/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>
+<!--    <div class="fb-like" data-href="https://motor.ru/gallery/2017/04/07/awesomediesel/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>-->
+<!--    <div class="fb-like" data-href="https://motor.ru/gallery/2017/04/07/fasttrucks/" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>-->
+<!--    <div class="fb-like" data-href="https://motor.ru/news/2017/04/07/miniremastered/?utm_source=motorfb&utm_medium=social&utm_campaign=kropotlivaya-i-dorogaya--no-chudesnaya-rabot" data-layout="standard" data-action="like" data-size="small" data-show-faces="true" data-share="true"></div>-->
+<!---->
+<!--    <div class="fb-like" data-href="https://motor.ru/articles/2017/04/06/apdeyt/" data-layout="box_count"-->
+<!--         data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>-->
+<!--    <div class="fb-like" data-href="http://www.anews.com/p/58199328/?utm_source=facebook&utm_medium=social&utm_campaign=mind_outburst" data-layout="box_count"-->
+<!--         data-action="like" data-size="large" data-show-faces="true" data-share="true"></div>-->
 </div>

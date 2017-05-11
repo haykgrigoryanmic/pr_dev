@@ -46,6 +46,8 @@ CREATE TABLE `admin` (
 -- Dumping data for table `admin`
 --
 
+--INSERT INTO `admin` (`id`, `email`, `password`, `username`, `first_name`, `middle_name`, `last_name`, `role`, `fb_url`, `web_site_url`, `created_date`, `updated_date`, `deleted_date`) VALUES (0, 'hayk.g.grigoryan@gmail.com', '9d3409f7e6161d60aa7cef6b1c8de1ed16e1069519875941ff77b59574375c17', 'hayk.g.grigoryan', '', '', '', 1, NULL, NULL, '2016-12-10 14:26:54', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
+
 -- --------------------------------------------------------
 
 --
@@ -66,6 +68,14 @@ CREATE TABLE `organisation` (
 -- Dumping data for table `organisation`
 --
 
+--INSERT INTO `organisation` (`id`, `name`, `owner_id`, `deleted`, `created_date`, `updated_date`, `deleted_date`) VALUES
+(1, 'Org name 1', 1, 0, '2016-12-18 16:53:08', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, 'Org name 1', 1, 0, '2016-12-18 16:53:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, 'Org name 2', 1, 0, '2016-12-18 16:53:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, 'Org name 3', 1, 0, '2016-12-18 16:53:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(5, 'Org name 21', 2, 0, '2016-12-18 16:53:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(6, 'Org name 22', 2, 0, '2016-12-18 16:53:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(7, 'Org name 23', 3, 0, '2016-12-18 16:53:50', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -93,6 +103,12 @@ CREATE TABLE `user` (
 --
 -- Dumping data for table `user`
 --
+
+--INSERT INTO `user` (`id`, `oauth_provider`, `oauth_uid`, `email`, `gender`, `locale`, `picture`, `link`, `password`, `username`, `first_name`, `last_name`, `fb_url`, `web_site_url`, `created_date`, `updated_date`, `deleted_date`) VALUES
+(1, '', '', 'admin@pr_dev.com', '', '', '', '', '644bb88af04bfdca00dd8cc8155bf758ae3716d40ab335b5e82f4781a1cf2270', 'admin', 'admin', 'admin', NULL, NULL, '2016-11-28 14:14:41', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(2, '', '', 'hayk@mail.com', '', '', '', '', '64a509f665d28b8e68a9f5d1f6b05fa77c4f2ea262f9809b0defe940efebc115', 'hayk', 'hayk', 'grigoryan', NULL, NULL, '2016-11-28 15:44:37', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(3, '', '', 'milenams88@gmail.com', '', '', '', '', '9d3409f7e6161d60aa7cef6b1c8de1ed16e1069519875941ff77b59574375c17', 'milenams88', '', '', NULL, NULL, '2016-12-07 16:06:58', '0000-00-00 00:00:00', '0000-00-00 00:00:00'),
+(4, '', '', 'shushan.injighulyan@gmail.com', '', '', '', '', '9d3409f7e6161d60aa7cef6b1c8de1ed16e1069519875941ff77b59574375c17', 'shushan.injighulyan', '', '', NULL, NULL, '2016-12-10 13:29:53', '0000-00-00 00:00:00', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables

@@ -3,20 +3,17 @@
 /**
  * Created by PhpStorm.
  * User: Hayk
- * Date: 28.11.2016
- * Time: 18:00
+ * Date: 11.03.2017
+ * Time: 19:12
  */
-
-defined('BASEPATH') OR exit('No direct script access allowed');
-
-class Main extends User_Parent
+class Facebook extends User_Parent
 {
 
 
     public function __construct() {
         parent::__construct();
-        $this->load->model('user_model');
-        $this->load->model('org_model');
+//        $this->load->model('user_model');
+//        $this->load->model('org_model');
         $this->load->library('session');
     }
 

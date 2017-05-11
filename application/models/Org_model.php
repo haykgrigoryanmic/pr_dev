@@ -14,12 +14,26 @@ class Org_model extends CI_Model {
 
     }
 
-    public function get_by_id() {
-
+    public function get_by_id($id) {
+        $this->db->select("*");
+        $this->db->where('id', $id);
+        $query = $this->db->get('organisation');
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        } else {
+            return false;
+        }
     }
 
-    public function get_by_admin_id() {
-
+    public function get_by_owner_id($id) {
+        $this->db->select("*");
+        $this->db->where('owner_id', $id);
+        $query = $this->db->get('organisation');
+        if ($query->num_rows() > 0) {
+            return $query->result_array();
+        } else {
+            return false;
+        }
     }
 
     public function get_all() {
