@@ -65,3 +65,11 @@ $route['admin/organisation/(:any)'] = "admin/organisation/$1";
 
 $route['admin/(:any)'] = "admin/admin/$1";
 $route['admin'] = "admin/admin/index";
+
+$route['main'] = "main/index";
+$route['login'] = "user/login";
+$route['signup'] = "user/sign_up";
+$route['logout'] = "user/logout";
+$route['organisation/(:any)'] = "organisation/get_organisation/$1";
+$route['organisations/(:any)'] = "organisation/my_organisations/$1";
+$route['organisations'] = "organisation/all_organisations";

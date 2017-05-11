@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://pr_dev';
+$config['base_url'] = 'http://pr.dev';
 
 /*
 |--------------------------------------------------------------------------
@@ -136,7 +136,7 @@ $config['subclass_prefix'] = 'MY_';
 | Note: This will NOT disable or override the CodeIgniter-specific
 |	autoloading (application/config/autoload.php)
 */
-$config['composer_autoload'] = FALSE;
+$config['composer_autoload'] = true;
 
 /*
 |--------------------------------------------------------------------------
@@ -511,3 +511,15 @@ $config['rewrite_short_tags'] = FALSE;
 | Array:		array('10.0.1.200', '192.168.5.0/24')
 */
 $config['proxy_ips'] = '';
+
+/*
+|--------------------------------------------------------------------------
+| Custom Configs
+|--------------------------------------------------------------------------
+*/
+
+/*FB config*/
+
+$config['FB_appId'] = '395031920545366'; //Facebook App ID
+$config['FB_appSecret'] = 'a45d49d4fb3d700f8b4c2143651e2b29'; // Facebook App Secret
+$config['FB_redirectURL'] = 'http://pr.dev/user/fblogin'; // Facebook callback URL
